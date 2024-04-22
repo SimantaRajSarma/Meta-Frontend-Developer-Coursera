@@ -8,7 +8,8 @@
 body {
   background-color: hsl(44, 100%, 85%);
   width: 100vw;
-  height: 100%;
+  height: 1100px;
+  overflow-x: hidden;
 }
 
 /* ------ header styling start ------  */
@@ -29,13 +30,16 @@ header > img {
 /* ------ navbar styling start -------  */
 nav {
   width: 80vw;
-  height: 3.5rem;
+  height: 4rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: hsl(349, 96%, 31%);
-  border-radius: 1.2rem;
+  background-color: #ff577f;
+  border-radius: 3rem;
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
 }
 
 nav > ul {
@@ -54,7 +58,6 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a:hover {
-  text-decoration: underline;
   transition: 0.5s;
   color: hsl(31, 100%, 72%);
 }
@@ -81,13 +84,11 @@ nav > ul > li > a:hover {
   border-radius: 3rem;
   margin-bottom: 0.5rem;
   overflow: hidden;
-  border: 1px solid black; /* in case, images are not there :D */
 }
 
 .product-info {
   border-radius: 1.5rem;
   overflow: hidden;
-  border: 1px solid black; /* in case, images are not there :D */
 }
 .product-info-one {
   grid-area: product-info-one;
@@ -105,6 +106,15 @@ nav > ul > li > a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.banner img:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+.product-info img:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 /* ------- footer style start ------- */
